@@ -1,0 +1,40 @@
+<script>
+    let idadePaciente, nomePaciente, quantidadeVezesPassouMedico
+    let quantidadeMedicamentosEstoque, quantidadeMedicamentosPaciente
+    let itemMenu
+
+    itemMenu = prompt(" O que você gostaria de acessar? 1- Cadastro, 2- Controle de Estoque ")
+
+    if (itemMenu == 1) {
+        nomePaciente = prompt("Qual é o nome do Paciente? ")
+        idadePaciente = prompt("Qual é a idade do Paciente? ")
+        quantidadeVezesPassouMedico = prompt("Quantas vezes o Paciente passou no médico? ")
+
+        if
+            (quantidadeVezesPassouMedico > 5) {
+            console.log("Este paciente é um caso urgente! ")
+        } else if (idadePaciente > 60) {
+            console.log(" Este paciente é um caso urgente! ")
+        } else {
+            console.log("Esse paciente não é um caso urgente! ")
+        }
+        console.log("Nome do paciente cadastrado: " + nomePaciente)
+        console.log("Idade do paciente cadastrado: " + idadePaciente)
+        console.log("Quantidade de vezes que passou no médico: " + quantidadeVezesPassouMedico)
+
+
+    } else if (itemMenu == 2) {
+            quantidadeMedicamentosEstoque = prompt("Quantos medicamentos possui em estoque? ")
+        while (quantidadeMedicamentosEstoque > 0) {
+            quantidadeMedicamentosPaciente = prompt("Quanto medicamento o paciente irá receber? ")
+            quantidadeMedicamentosEstoque = quantidadeMedicamentosEstoque - quantidadeMedicamentosPaciente
+            console.log("Quantidade de medicamentos restantes:" + quantidadeMedicamentosEstoque)
+        }
+
+        if(quantidadeMedicamentosEstoque <= 0){
+            console.log("O estoque de medicamentos acabou! ")
+        }
+    }
+
+
+</script>
